@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script src = "js/app.js"></script>
+    <script src = "services/apiServices.js"></script>
+    <script src = "controllers/homeController.js"></script>
+
+  </head>
+  <body ng-app = "app">
+    <div ng-controller = "HomeController" >
+      <div class="row">
+        <table class="table table-striped">
+              <thead>
+                <th>Name</th>
+                <th>value</th>
+                <th>Description</th>
+              </thead>
+              <tbody >
+                <tr ng-repeat="record in data">
+                    <td width="30%">{{record.label}}</td>
+                    <td width="33%">
+                      <input class="form-control" type="text" name="value" ng-model="record.value" ng-if="record.type == 'text'" />
+                      <label class="container2" ng-if="record.type == 'check'">
+                          <input  type="checkbox" name="value" ng-model="record.value" ng-if="record.type == 'check'" />
+                          <span class="checkmark"></span>    
+                      </label>
+                      <select class="form-control" ng-options="gender for gender in genderArray" name="value" ng-model="record.value" ng-if="record.type == 'select'">
+                      </select>
+                    </td width="33%">
+                    <td>{{record.description}}</td>    
+                </tr>
+              </tbody>
+        </table>      
+      </div>
+      <div class="row">
+          <input id="submit" type="submit" name="Save" ng-click="submit()" />
+      </div>
+    </div>
+  </body>
+</html>

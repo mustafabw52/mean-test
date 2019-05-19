@@ -1,0 +1,9 @@
+#!/usr/bin/env node --debug --trace-warnings --use_strict
+
+/**
+ * Module dependencies.
+ */
+require('module-alias/register')
+require('babel-register')
+require('babel-polyfill')
+require('../main')

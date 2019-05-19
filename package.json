@@ -1,0 +1,40 @@
+{
+  "name": "fgdfg",
+  "version": "1.0.0",
+  "description": "Mean Test",
+  "main": "main",
+  "repository": "repo here",
+  "author": "Your Name",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "async": "^2.5.0",
+    "babel-cli": "^6.26.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-http-proxy": "^1.1.0",
+    "lodash": "^4.17.10",
+    "method-override": "^2.3.10",
+    "module-alias": "^2.1.0",
+    "moment": "^2.22.2",
+    "winston": "^2.4.0",
+    "yamljs": "^0.3.0"
+  },
+  "engines": {
+    "node": ">=9.1.0"
+  },
+  "scripts": {
+    "start": "nodemon --inspect=0.0.0.0:3000 ./bin/dev  --ignore 'files/*'"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.17.5",
+    "standard": "^10.0.3"
+  },
+  "_moduleAliases": {
+    "@controllers": "controllers",
+    "@files": "files"
+  }
+}

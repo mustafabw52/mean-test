@@ -1,0 +1,42 @@
+[
+  {
+    "key": "id",
+    "label": "Id",
+    "value": "dgfdgfdgfdg",
+    "type": "text",
+    "description": "The id of the user"
+  },
+  {
+    "key": "age",
+    "label": "Age",
+    "value": "2516756",
+    "type": "text",
+    "description": "The age of the user"
+  },
+  {
+    "key": "gender",
+    "label": "Gender",
+    "value": "male",
+    "type": "select",
+    "options": [
+      "female",
+      "male",
+      "others"
+    ],
+    "description": "The gender of the user"
+  },
+  {
+    "key": "pin",
+    "label": "Pincode",
+    "value": "41101865656",
+    "type": "text",
+    "description": "The pincode the user resides in"
+  },
+  {
+    "key": "status",
+    "label": "Active",
+    "value": true,
+    "type": "check",
+    "description": "The user is active or not"
+  }
+]
